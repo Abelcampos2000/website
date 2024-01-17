@@ -1,0 +1,17 @@
+table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+	        height:20%;	
+        }
+	th, td {
+            border: 5px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+	body {
+            background-color: lightblue;
+        }
+	table {
+             background: linear-gradient(pink, grey);
+        }

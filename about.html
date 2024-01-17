@@ -1,0 +1,103 @@
+<html lang="en"><head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tareita</title>
+           
+            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="https://static.alwaysdata.com/css/administration.css" type="text/css" media="all">
+            <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+            <link href="https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700" rel="stylesheet" type="text/css">
+    </head>
+    <style>
+	    table {
+            border-collapse: collapse;
+            width: 100%;
+            margin: 20px auto;
+	        height:20%;	
+        }
+	th, td {
+            border: 5px solid #000000;
+            text-align: left;
+            padding: 8px;
+        }
+	body {
+            background-color: lightblue;
+        }
+	table {
+             background: linear-gradient(pink, grey);
+        }
+</style>
+    <body>
+        <div class="login-modal">
+            <div class="header">
+               <h1> PRODUCTOS</h1>
+            </div>
+            <label for="nombre">Categoria:</label>
+            <input type="text" id="categoria" name="categoria" required="">
+            
+            <label for="nombre">Talla:</label>
+            <input type="text" id="talla" name="talla" required="">
+            
+            <label for="nombre">N° de Serie:</label>
+            <input type="text" id="serie" name="serie" required="">
+            
+            <label for="nombre">Codigo:</label>
+            <input type="text" id="codigo" name="codigo" required="">
+            
+            <button type="button" onclick="agregarProducto()">Agregar Producto</button>
+            
+            
+               <table border="2">	
+		<thead>
+			<tr>
+			<td>ID  </td>
+			<td> Categoria </td>
+			<td> Talla </td>
+			<td>N° de Serie</td>
+			<td>Codigo</td>
+			</tr>
+	</thead>
+		<tbody>
+		<tr>
+                <td>1</td>
+                <td>Polera</td>
+                <td>S</td>
+                <td>1</td>
+                <td>759863252</td>
+	</tr>
+		<tr>
+                <td>2</td>
+                <td>Pantalon</td>
+                <td>30</td>
+                <td>2</td>
+                <td>75989165</td>
+            </tr>
+		<tr>
+                <td>3</td>
+                <td>Camisa</td>
+                <td>M</td>
+                <td>3</td>
+                <td>52635289</td>
+            </tr>	
+               </tbody>
+		</table>
+        </div>
+        <script>
+    function agregarProducto() {
+      var nombre = document.getElementById('categoria').value;
+      var precio = document.getElementById('talla').value;
+      var categoria = document.getElementById('serie').value;
+      var categoria = document.getElementById('codigo').value;
+
+      var listItem = document.createElement('li');
+      listItem.textContent = `${categoria} - ${talla} - ${serie} - ${codigo} -`;
+
+      document.getElementById('productList').appendChild(listItem);
+
+      // Limpiar el formulario después de agregar un producto
+      document.getElementById('productForm').reset();
+    }
+  </script>
+</body>
+</html>
