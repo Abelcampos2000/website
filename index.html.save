@@ -1,28 +1,70 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Tablita</title>
-            <link rel="icon" type="image/png" href="https://static.alwaysdata.com/aldjango/img/favicon.png" />
-            <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-            <link rel="stylesheet" href="https://static.alwaysdata.com/css/administration.css" type="text/css" media="all" />
-            <link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-            <link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
-    </head>
-    <body>
-        <div>
-		<form>
-			<h1>Tablita Solansh</h1>
-			<div>
-				<input type="text" placeholder="Username"required>
-			</div>
-			<div
-></div>
-		</form>
-	</div>
-    </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feliz Cumpleaños!</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="balloons">
+        <div class="balloon" onclick="showMessage('Ya sabes que hoy es un día especial. Es el día en que celebramos que nacio una linda y robusta bebe. Que este día esté lleno de bendiciones y alegría, recordándote lo querida y valiosa que eres.')"><img src="b1.png" alt="Globo de Cumpleaños"><span class="letter">Y</span></div>
+        <div class="balloon" onclick="showMessage('Oh,En este día, deseamos que sientas el amor y la gratitud que te rodea, no solo de parte de quienes te conocemos, sino también del Señor, quien te ha sostenido y guiado en cada paso de tu vida.')"><img src="b2.png" alt="Globo de Cumpleaños"><span class="letter">O</span></div>
+        <div class="balloon" onclick="showMessage('Siempre fuiste y seguiras siendo una buena amiga. Tus palabras de aliento y tu constante presencia han sido un reflejo del amor de Dios')"><img src="b3.png" alt="Globo de Cumpleaños"><span class="letter">S</span></div>
+        <div class="balloon" onclick="showMessage('Sigue siendo esa semilla de esperanza que florece en los corazones de quienes te conocen! Tu ejemplo de integridad son ejemplo a seguir. Que este día esté lleno de momentos dulces y recuerdos preciosos.')"><img src="b4.png" alt="Globo de Cumpleaños"><span class="letter">S</span></div>
+        <div class="balloon" onclick="showMessage('En este día tan especial, celebras todo lo maravilloso que eres. Y estoy agradecido por que Dios te puso en mi camino y gracias por tu amistad')"><img src="b5.png" alt="Globo de Cumpleaños"><span class="letter">E</span></div>
+        <div class="balloon" onclick="showMessage('La vida es un regalo precioso, y tú eres una de ellas.')"><img src="b6.png" alt="Globo de Cumpleaños"><span class="letter">L</span></div>
+        <div class="balloon" onclick="showMessage('Inspiras a todos con tu dedicación a seguir a Cristo y a vivir según sus enseñanzas. Que la gracia de Dios te acompañe hoy y siempre')"><img src="b7.png" alt="Globo de Cumpleaños"><span class="letter">I</span></div>
+        <div class="balloon" onclick="showMessage('Nunca te olvides de Papá Dios que el es bueno en todo tiempo y en todo tiempo el es bueno♥')"><img src="b8.png" alt="Globo de Cumpleaños"><span class="letter">N</span></div>
+        <!-- Añade más globos con diferentes posiciones aquí -->
+    </div>
+
+    <div class="container">
+        <h1>¡Feliz Cumpleaños!</h1>
+        <div class="message">
+            <p>YOSSELIN</p>
+            <p>Espero que hayas tenido un día lleno alegría y muchas sorpresas.</p>
+            <p>¡Que todos los deseos de tu corazon Dios los cumpla, sabes que te estimo eres una gran amiga</p>
+            <!-- Contenedor para las imágenes -->
+            <div class="cake-container">
+                <img src="img1.PNG" class="cake small-horizontal-img" alt="Torta de Cumpleaños">
+                <img src="img3.PNG" class="cake small-horizontal-img" alt="Torta de Cumpleaños">
+                <img src="img4.PNG" class="cake small-horizontal-img" alt="Torta de Cumpleaños">
+                <img src="img5.PNG" class="cake small-horizontal-img" alt="Torta de Cumpleaños">
+            </div>
+        </div>
+    </div>
+
+    <!-- Contenedor para la carta -->
+    <div class="overlay" id="overlay" style="display: none;">
+        <div class="message-card">
+            <p id="messageContent"></p>
+            <button onclick="hideMessage()">Cerrar</button>
+        </div>
+    </div>
+
+    <!-- Reproductor de música -->
+    <audio autoplay loop>
+        <source src="La Bondad de Dios  con Becky Collazos y Gateway Worship Español.mp3" type="audio/mpeg">
+        Tu navegador no soporta el elemento de audio.
+    </audio>
+
+    <script>
+        function showMessage(message) {
+            // Mostrar el mensaje en la carta
+            document.getElementById('messageContent').innerText = message;
+            // Mostrar la carta
+            document.getElementById('overlay').style.display = 'flex';
+        }
+
+        function hideMessage() {
+            // Ocultar la carta
+            document.getElementById('overlay').style.display = 'none';
+        }
+    </script>
+
+</body>
 
 </html>
-
